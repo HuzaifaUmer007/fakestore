@@ -71,7 +71,7 @@ export default function Page() {
           </div>
           <div className="wrap hero-grid">
             <div className="hero-copy">
-              <p className="kicker hx"><span className="pulse" aria-hidden="true" />Upwork Rising Talent · Book marketing team</p>
+              <p className="kicker hx">Upwork Rising Talent · Book marketing team</p>
               <h1 className="h1">
                 <span className="line"><span>Elevate your</span></span>
                 <span className="line"><span>book from draft</span></span>
