@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: desc,
   // Demo build: keep it out of search until the owner approves it.
   robots: { index: false, follow: false },
-  icons: { icon: '/favicon.svg' },
+  icons: { icon: '/favicon.png', apple: '/apple-icon.png' },
   openGraph: { title: 'A.O. Book Marketing & Digital Services', description: desc, type: 'website' },
 };
 

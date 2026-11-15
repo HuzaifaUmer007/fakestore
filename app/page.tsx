@@ -35,7 +35,7 @@ export default function Page() {
       <div className="loader" id="loader" aria-hidden="true">
         <div className="loader-panel lp1" /><div className="loader-panel lp2" />
         <div className="loader-inner">
-          <div className="loader-mark">A.O.</div>
+          <img className="loader-mark" src="/img/logo.webp" alt="" width="120" height="120" />
           <div className="loader-name">{'Book Marketing'.split('').map((c, i) => <span key={i} style={{ ['--i' as string]: i }}>{c === ' ' ? ' ' : c}</span>)}</div>
           <div className="loader-bar"><i /></div>
         </div>

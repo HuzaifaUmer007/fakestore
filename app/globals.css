@@ -66,7 +66,7 @@ html:not(.loading) .lp1 { transform: translateY(-101%); }
 html:not(.loading) .lp2 { transform: translateY(101%); transition-delay: 0.06s; }
 .loader-inner { position: relative; text-align: center; color: var(--gold); transition: opacity 0.3s; }
 html:not(.loading) .loader-inner { opacity: 0; }
-.loader-mark { font-family: Georgia, serif; font-weight: 700; font-size: 4.2rem; line-height: 1; animation: markIn 0.9s var(--ease) both; }
+.loader-mark { width: 120px; height: 120px; margin: 0 auto; border-radius: 28px; box-shadow: 0 0 0 2px rgba(242, 182, 50, 0.6); animation: markIn 0.9s var(--ease) both; }
 .loader-name { display: flex; justify-content: center; overflow: hidden; font-family: var(--display); font-weight: 800; font-size: 1.1rem; letter-spacing: 0.08em; text-transform: uppercase; color: #f7ead8; margin-top: 8px; }
 .loader-name span { display: inline-block; animation: rise 0.6s var(--ease) both; animation-delay: calc(0.25s + var(--i) * 0.03s); }
 .loader-bar { width: 180px; height: 3px; background: rgba(242, 182, 50, 0.2); border-radius: 3px; margin: 18px auto 0; overflow: hidden; }
