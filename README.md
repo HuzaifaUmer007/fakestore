@@ -38,7 +38,7 @@ The personal Gmail address is deliberately left off the page. WhatsApp and Upwor
 
 ## Photos
 
-- New logo mark (A + O with an open book) generated with OpenAI gpt-image-2 for this concept; the owner should approve it or keep their original logo.
+- New logo mark (open book with a rising growth chart, in a circle) generated with OpenAI gpt-image-2 for this concept; the owner should approve it or keep their original logo.
 - Owner's own images (approved for reuse): founder portrait, portfolio mockups, Starter Kit cover.
 - Stand-ins to replace (Wikimedia Commons, credited at `/credits/`): the four process-step photos (notebook, library shelves, typewriter keys, library aisle).
 
