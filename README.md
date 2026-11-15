@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# A.O. Book Marketing: redesign concept
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A bold, animated one-page redesign of **awoniyioluwatobi.vercel.app**, built with Next.js 15 (App Router, static export), GSAP + ScrollTrigger and Lenis smooth scroll.
 
-## Available Scripts
+## Run it
 
-In the project directory, you can run:
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # writes a static site to /out, ready for Vercel/Netlify/any host
+```
 
-### `npm start`
+## Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| File | What it holds |
+| --- | --- |
+| `app/data.ts` | Every fact on the page: packages, portfolio, team, reviews, links |
+| `app/page.tsx` | The page markup (server-rendered) |
+| `app/Motion.tsx` | All motion: loader, hero timeline, sticky sideways gallery, scroll-lit text, stack, magnetic buttons |
+| `app/globals.css` | Design tokens (oxblood + gold from the logo) and all styles |
+| `app/credits/page.tsx` | Photo credits for the Wikimedia stand-ins (`noindex`) |
+| `public/img/` | All images, local WebP files (nothing is hotlinked) |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Sections
 
-### `npm test`
+Loader → nav → hero (founder plate, spinning tagline ring, stickers, count-ups, ticker) → portfolio (sticky sideways gallery) → services & team → mission story (scroll-lit text, collage, stats) → 4-step process stack → pricing board + packages → Starter Kit → reviews marquee → contact (WhatsApp card + chat preview) → closing line → footer → phone dock.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Facts used (all from the live site, read 15 Nov 2026)
 
-### `npm run build`
+- Business name, tagline "Marketing · Visibility · Growth", founder and three team members with their roles.
+- Packages: Book Launch Essentials $75 (3-day), Full Launch Campaign $150 (5-day), Full Team Package $250 (7-day); Starter Kit $7.30 on Selar.
+- Portfolio: The Pivot (#1 in Counseling Children), Skinny Pretty Outgoing & Rich, two Richard Simonian titles, The You That Is True, SaaS Pricing eBook, ghostwritten self-help manuscript, Ruvna case study.
+- Six testimonials, shortened but not reworded. Names are shown as first name + last initial.
+- Contact: WhatsApp +234 816 459 7604, Upwork, Facebook, Instagram, LinkedIn, Selar.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Nothing is estimated or invented. Two copy fixes: the old site's "Everything in Starter / Standard" now names the real tiers ("Everything in Book Launch Essentials / Full Launch Campaign").
+The personal Gmail address is deliberately left off the page. WhatsApp and Upwork are the contact routes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Photos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Owner's own images (approved for reuse): logo, founder portrait, portfolio mockups, Starter Kit cover.
+- Stand-ins to replace (Wikimedia Commons, credited at `/credits/`): the four process-step photos (notebook, library shelves, typewriter keys, library aisle).
 
-### `npm run eject`
+## Before this goes live
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Remove `robots: { index: false }` in `app/layout.tsx`; add canonical URL, `sitemap.xml`, `robots.txt`, and an `og:image` (1200×630).
+- Get each reviewer's OK for their quote.
+- Shorten or drop the loader and preload the hero image to bring mobile LCP under 2.5 s (now 5.3 s with the loader; CLS is 0).
+- Move to a custom domain and plan separate service pages.
